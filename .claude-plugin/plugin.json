@@ -1,0 +1,8 @@
+{
+  "name": "carbonid1",
+  "version": "0.1.0",
+  "description": "Shared Claude Code config (hooks, skills, commands) for carbonid1 personal projects",
+  "author": {
+    "name": "Andrew Korin"
+  }
+}

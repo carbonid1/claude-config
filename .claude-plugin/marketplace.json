@@ -1,0 +1,13 @@
+{
+  "name": "carbonid1",
+  "owner": {
+    "name": "Andrew Korin"
+  },
+  "plugins": [
+    {
+      "name": "carbonid1",
+      "source": "./",
+      "description": "Shared Claude Code config for carbonid1 personal projects"
+    }
+  ]
+}
