@@ -1,0 +1,8 @@
+{
+  "name": "tdd",
+  "version": "0.1.0",
+  "description": "Test-driven development workflow (red-green-refactor, Storybook/Vitest/E2E guidance)",
+  "author": {
+    "name": "Andrew Korin"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "todo",
+  "version": "0.1.0",
+  "description": "Notion-backed task management. Reads project name from .claude/carbonid1.json.",
+  "author": {
+    "name": "Andrew Korin"
+  }
+}

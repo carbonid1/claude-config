@@ -1,0 +1,8 @@
+{
+  "name": "design-system",
+  "version": "0.1.0",
+  "description": "UI components and design patterns for @carbonid1/design-system consumers",
+  "author": {
+    "name": "Andrew Korin"
+  }
+}

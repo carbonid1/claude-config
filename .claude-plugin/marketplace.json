@@ -5,9 +5,24 @@
   },
   "plugins": [
     {
-      "name": "carbonid1",
-      "source": "./",
-      "description": "Shared Claude Code config for carbonid1 personal projects"
+      "name": "core",
+      "source": "./plugins/core",
+      "description": "Core hooks (skill-forced-eval) for every carbonid1 project"
+    },
+    {
+      "name": "tdd",
+      "source": "./plugins/tdd",
+      "description": "Test-driven development workflow (red-green-refactor, Storybook/Vitest/E2E guidance)"
+    },
+    {
+      "name": "design-system",
+      "source": "./plugins/design-system",
+      "description": "UI components and design patterns for @carbonid1/design-system consumers"
+    },
+    {
+      "name": "todo",
+      "source": "./plugins/todo",
+      "description": "Notion-backed task management. Reads project name from .claude/carbonid1.json."
     }
   ]
 }

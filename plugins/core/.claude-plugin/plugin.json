@@ -1,0 +1,8 @@
+{
+  "name": "core",
+  "version": "0.1.0",
+  "description": "Core hooks (skill-forced-eval) for every carbonid1 project",
+  "author": {
+    "name": "Andrew Korin"
+  }
+}

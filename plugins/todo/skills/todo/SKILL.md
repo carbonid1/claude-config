@@ -12,13 +12,17 @@ Manages per-project todos in the Eng Projects Notion database.
 
 ## Setup (run first)
 
-**Read the project name** from `.claude/notion-project` at the current repo root. It's a single-line plain text file containing the exact Notion "Project" property value (e.g., `InkVoice`, `CoI Calculator`). Store it as `$PROJECT` and substitute everywhere this skill says `$PROJECT`.
+**Read the project name** from `.claude/carbonid1.json` at the current repo root — look up key `notion.project`. That value is the exact Notion "Project" property string (e.g., `InkVoice`, `CoI Calculator`). Store it as `$PROJECT` and substitute everywhere this skill says `$PROJECT`.
 
-If `.claude/notion-project` does not exist, stop and ask the user to create it:
+Example `.claude/carbonid1.json`:
 
+```json
+{
+  "notion": { "project": "InkVoice" }
+}
 ```
-echo "<Your Notion Project display name>" > .claude/notion-project
-```
+
+If the file is missing or `notion.project` is unset, stop and ask the user to add it — don't guess a project name.
 
 Then load Notion MCP tools:
 
