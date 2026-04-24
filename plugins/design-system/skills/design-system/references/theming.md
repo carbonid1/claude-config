@@ -6,6 +6,18 @@ Tokens represent semantic roles, not fixed hues. Each theme picks the best hue f
 
 We use shadcn's token naming convention but own all color values. When pulling a new shadcn component, replace any generated color values with our hand-tuned tokens. This follows shadcn's own approach (~99% token-driven) as validation, not as a dependency.
 
+## Palettes
+
+`@carbonid1/design-system` ships multiple palettes — currently `reader` (InkVoice) and `dashboard` (CoI Calculator, admin-style UIs). Both define the same token names on `:root` + `.dark`; consumers choose one by importing the matching CSS:
+
+```ts
+import '@carbonid1/design-system/themes/reader'
+// or
+import '@carbonid1/design-system/themes/dashboard'
+```
+
+Primitives must render correctly under every palette × light/dark combination — that's the contract. Because both palettes hit the same token names, primitive code stays palette-agnostic and consumer code doesn't change when switching.
+
 ## Rules
 
 - **All color through tokens.** Every color that appears in themed UI must reference a CSS variable. No hardcoded Tailwind color classes (`blue-500`, `amber-400`, `gray-300`) for meaning-bearing colors.
