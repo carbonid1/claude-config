@@ -15,11 +15,6 @@
       "description": "Test-driven development workflow (red-green-refactor, Storybook/Vitest/E2E guidance)"
     },
     {
-      "name": "design-system",
-      "source": "./plugins/design-system",
-      "description": "UI components and design patterns for @carbonid1/design-system consumers"
-    },
-    {
       "name": "todo",
       "source": "./plugins/todo",
       "description": "Notion-backed task management. Reads project name from .claude/carbonid1.json."
