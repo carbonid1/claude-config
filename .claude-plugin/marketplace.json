@@ -18,6 +18,11 @@
       "name": "todo",
       "source": "./plugins/todo",
       "description": "Notion-backed task management. Reads project name from .claude/carbonid1.json."
+    },
+    {
+      "name": "grill-me",
+      "source": "./plugins/grill-me",
+      "description": "Interview the user relentlessly about a plan or design until reaching shared understanding. Vendored from mattpocock/skills."
     }
   ]
 }

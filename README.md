@@ -13,6 +13,7 @@ In any project session:
 /plugin install core@carbonid1           # recommended — the hook that enforces skill evaluation
 /plugin install tdd@carbonid1            # if the project uses TDD
 /plugin install todo@carbonid1           # if the project tracks todos in Notion
+/plugin install grill-me@carbonid1       # interview-driven plan/design stress-test
 ```
 
 Each plugin auto-updates from `main` on next session start.
@@ -24,6 +25,7 @@ Each plugin auto-updates from `main` on next session start.
 | `core` | `skill-forced-eval-hook.sh` — forces explicit skill evaluation on every `UserPromptSubmit` | Every project. Makes skill triggering reliable. |
 | `tdd` | TDD workflow skill (red-green-refactor, Storybook/Vitest/E2E guidance) | Projects that want consistent testing conventions. |
 | `todo` | Notion-backed task management skill. Reads project name from `.claude/carbonid1.json`. | Projects whose todos live in the shared Eng Projects Notion DB. |
+| `grill-me` | Interview-style skill that stress-tests a plan one question at a time. Vendored — see Credits. | Projects where you want a structured grilling before implementing. |
 
 The design-system skill ships with `@carbonid1/design-system` itself (postinstall symlinks it into `.claude/skills/`), so it's no longer a plugin here.
 
@@ -57,7 +59,14 @@ claude-config/
     ├── tdd/
     │   ├── .claude-plugin/plugin.json
     │   └── skills/tdd/
-    └── todo/
+    ├── todo/
+    │   ├── .claude-plugin/plugin.json
+    │   └── skills/todo/
+    └── grill-me/
         ├── .claude-plugin/plugin.json
-        └── skills/todo/
+        └── skills/grill-me/
 ```
+
+## Credits
+
+- `grill-me` — by [Matt Pocock](https://github.com/mattpocock), vendored from [mattpocock/skills](https://github.com/mattpocock/skills). Re-packaged here as a standalone plugin so it can be installed individually; not original work.
